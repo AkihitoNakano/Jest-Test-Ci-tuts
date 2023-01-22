@@ -8,7 +8,7 @@ describe('user routesのテスト', () => {
   })
 
   it('Create user with valid values', async () => {
-    const user = { email: 'abc@r.com', password: 'abc' }
+    const user = { email: 'abc@r.com', password: 'abcd' }
     const result = await supertest(app).post('/user').send(user)
     expect(result.body.email).toBe(user.email)
     expect(result.body.password).toBe(user.password)
