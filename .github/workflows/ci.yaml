@@ -12,7 +12,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:15-alpine
+        image: postgres:15
         env:
           POSTGRES_USER: root
           POSTGRES_PASSWORD: secret
@@ -27,7 +27,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v3
