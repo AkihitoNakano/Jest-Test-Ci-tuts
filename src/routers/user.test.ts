@@ -16,7 +16,6 @@ describe('user routesのテスト', () => {
   it('Failed to create user with invalid email value', async () => {
     const user = { email: '', password: 'aefwa' }
     const result = await supertest(app).post('/user').send(user)
-    console.log(result)
     expect(result.statusCode).toBe(500)
     expect(result.text).toBe('ユーザー登録できませんでした')
   })
